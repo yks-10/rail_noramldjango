@@ -1,0 +1,17 @@
+{% extends 'irctc/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+        {% if user1 %}
+            <div class="list-group">
+                {% for user in user1 %}
+                <a  class="list-group-item list-group-item-action"><b>{{ user.train_starting }} to {{ user.train_ending }} </b></a>
+                {% endfor %}
+            </div>
+        {% else %}
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}
